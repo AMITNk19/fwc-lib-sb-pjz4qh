@@ -1,0 +1,51 @@
+.fwc-radio-tabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.fwc-radio-tabs input {
+  position: absolute;
+  left: -99999em;
+  top: -99999em;
+}
+.fwc-radio-tabs div {
+  flex-grow: 1;
+  flex: 1;
+  display: flex;
+}
+.fwc-radio-tabs label {
+  width: 100%;
+  display: inline-block;
+  padding: var(--fwcu) 0;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(var(--color-rgb-black), 0.08);
+  border: 1px solid rgba(var(--color-rgb-black), 0.08);
+  border-right: none;
+  color: var(--color-primary);
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(1.75 * var(--fwcu));
+  line-height: calc(2.75 * var(--fwcu));
+}
+.fwc-radio-tabs label:hover {
+  cursor: pointer;
+}
+.fwc-radio-tabs input:checked + label {
+  color: white;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.fwc-radio-tabs input:focus + label {
+  outline: 1px solid;
+  outline-offset: 1px;
+  outline-color: var(--color-primary);
+}
+.fwc-radio-tabs div:first-child label {
+  border-radius: var(--border-radius) 0px 0px var(--border-radius);
+  border-right: 0px;
+}
+.fwc-radio-tabs div:last-child label {
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+  border-right: 1px solid rgba(var(--color-rgb-black), 0.08);
+}

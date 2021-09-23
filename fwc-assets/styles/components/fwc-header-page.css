@@ -1,0 +1,6 @@
+.fwc-header-page-slotted {
+  color: var(--color-white);
+}
+.fwc-header-page-slotted .fwc-row {
+  width: 100%;
+}

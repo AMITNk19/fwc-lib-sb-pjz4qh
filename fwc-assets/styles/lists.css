@@ -1,0 +1,40 @@
+.fwc-list-dot li {
+  display: flex;
+  align-items: flex-start;
+  color: var(--color-gray-one);
+  font-size: calc(1.75 * var(--fwcu));
+  letter-spacing: 0;
+  line-height: calc(2.75 * var(--fwcu));
+  margin-bottom: calc(2 * var(--fwcu));
+}
+.fwc-list-dot li::before {
+  margin-right: calc(0.5 * var(--fwcu));
+  font-size: calc(3 * var(--fwcu));
+  content: ' \B7 ';
+  display: inline-block;
+  color: var(--color-gray-three);
+}
+.fwc-list-check li {
+  display: flex;
+  align-items: flex-start;
+  font-size: calc(2.25 * var(--fwcu));
+  line-height: calc(3 * var(--fwcu));
+  color: var(--color-gray-one);
+  margin-bottom: calc(2 * var(--fwcu));
+}
+.fwc-list-check li::before {
+  margin-right: calc(0.5 * var(--fwcu));
+  font-size: calc(3 * var(--fwcu));
+  content: '\e922';
+  font-family: 'fwc-motif-icons';
+  display: inline-block;
+  color: var(--color-util-two);
+}
+
+/* hack for IE11 - remove 12/09/21 */
+@media all and (-ms-high-contrast: none) {
+  .fwc-list-check li,
+  .fwc-list-dot li {
+    display: block;
+  }
+}

@@ -1,0 +1,127 @@
+.fwc-container.left-rail {
+  height: 100%;
+  position: relative;
+  padding: 0 calc(5.25 * var(--fwcu));
+}
+.fwc-row.left-rail {
+  border-top: 1px solid var(--color-gray-five);
+  flex-wrap: nowrap;
+}
+.fwc-left-rail-nav {
+  position: relative;
+  border-top: 1px solid var(--color-gray-five);
+  width: calc(24 * var(--fwcu));
+  height: calc(100vh - 156px);
+}
+.fwc-left-rail-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: calc(100% - (24 * var(--fwcu)));
+}
+
+.fwc-sidebar-icons-list .fwc-list-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: calc(2 * var(--fwcu));
+  padding: 0;
+  border: none;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  color: var(--color-gray-one);
+}
+.fwc-list-item .fwc-icon {
+  color: var(--color-gray-three);
+}
+.fwc-list-item.active span.fwc-icon {
+  color: var(--color-primary);
+}
+.fwc-list-item:last-child {
+  margin-bottom: 0;
+}
+.fwc-list-item span {
+  text-transform: capitalize;
+}
+.fwc-list-item span.li-txt {
+  padding-left: calc(2 * var(--fwcu));
+  color: var(--color-gray-one);
+}
+.fwc-list-item.active span:not(.fwc-icon) {
+  color: var(--color-primary);
+}
+.fwc-list-item.active:before {
+  content: '';
+  height: 100%;
+  width: calc(0.5 * var(--fwcu));
+  position: absolute;
+  left: calc(-1 * var(--fwcu));
+  top: 0;
+  background: var(--color-primary);
+}
+.fwc-rotate {
+  transform: rotate(45deg);
+  display: none;
+}
+.fwc-nav-compose {
+  margin: calc(2 * var(--fwcu)) 0;
+}
+.fwc-nav-compose.fwc-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+span.fwc-msg-count {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .fwc-container.left-rail {
+    padding: 0;
+  }
+  .fwc-left-rail-content {
+    width: 100%;
+  }
+  .fwc-left-rail-nav {
+    width: calc(4 * var(--fwcu));
+    z-index: 9;
+  }
+  .fwc-list-item.active span.fwc-icon {
+    color: var(--color-primary);
+  }
+  .fwc-rail-overlay:before {
+    content: '';
+    position: absolute;
+    background: rgba(var(--color-rgb-gray-one), 0.5);
+    z-index: 1;
+    top: 2px;
+    width: 100%;
+    height: 100%;
+  }
+  .fwc-nav-compose:focus {
+    outline: none;
+  }
+  .fwc-messages-nav:not(.open) .fwc-list-item {
+    justify-content: center;
+  }
+  .fwc-messages-nav:not(.open) .fwc-nav-compose {
+    border: none;
+    padding: 0;
+  }
+  .fwc-messages-nav:not(.open) .fwc-rotate {
+    display: inline-block;
+    color: var(--color-gray-three);
+  }
+  .fwc-messages-nav:not(.open) .fwc-compose-txt,
+  .fwc-messages-nav:not(.open) .fwc-msg-count,
+  .fwc-messages-nav:not(.open) .li-txt {
+    visibility: hidden;
+    position: absolute;
+  }
+  span.fwc-msg-count {
+    position: absolute;
+    right: 0;
+  }
+}

@@ -1,0 +1,58 @@
+.fwc-btn-filters {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  /*
+        This was a fieldset, but Edge won't flex fieldsets (known bug)
+        Using div role="group"
+    */
+}
+
+.fwc-btn-filters input {
+  position: absolute;
+  left: -99999px;
+}
+.fwc-btn-filters > div {
+  flex: 1 1 auto;
+}
+.fwc-btn-filters input:checked + label,
+.fwc-btn-filters input:checked:focus + label,
+.fwc-btn-filters label:active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.fwc-btn-filters input:focus + label {
+  background-color: var(--color-gray-five);
+  border-color: var(--color-black);
+  color: var(--color-black);
+}
+
+.fwc-btn-filters label {
+  padding: calc(2 * var(--fwcu)) var(--fwcu);
+  border: thin solid var(--color-gray-four);
+  background-color: var(--color-white);
+  font-weight: bold;
+  color: var(--color-gray-one);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+  height: calc(5 * var(--fwcu));
+}
+
+.fwc-btn-filters div:first-of-type label {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.fwc-btn-filters div:last-of-type label {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.fwc-btn-filters-legend {
+  padding-bottom: var(--fwcu);
+}

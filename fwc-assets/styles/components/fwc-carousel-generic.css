@@ -1,0 +1,78 @@
+.fwc-carousel-quote-wrapper .fwc-carousel-body {
+  font-size: calc(2.25 * var(--fwcu));
+  line-height: calc(3 * var(--fwcu));
+}
+.fwc-carousel-quote-wrapper .fwc-carousel-body-title {
+  font-size: calc(2 * var(--fwcu));
+  font-weight: bold;
+  line-height: calc(3 * var(--fwcu));
+  margin-top: calc(3 * var(--fwcu));
+}
+.fwc-carousel-quote-wrapper .fwc-carousel-info {
+  font-size: calc(1.75 * var(--fwcu));
+  font-style: italic;
+  line-height: calc(2.75 * var(--fwcu));
+}
+.fwc-carousel-quote-wrapper .fwc-body-wrapper {
+  padding: 0 0 0 calc(4 * var(--fwcu));
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% - (18.75 * var(--fwcu)));
+}
+.fwc-carousel-quote-wrapper .fwc-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  flex-basis: calc(18.75 * var(--fwcu));
+  height: calc(18.75 * var(--fwcu));
+  border-radius: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.fwc-carousel-example-cont {
+  position: relative;
+}
+.fwc-quote-bg {
+  position: absolute;
+  left: calc(30 * var(--fwcu));
+  top: 0;
+  z-index: 0;
+}
+.fwc-carousel-quote-wrapper {
+  width: 100%;
+}
+.fwc-carousel-quote-wrapper > div {
+  height: 100%;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .fwc-carousel-quote-wrapper .fwc-carousel-body {
+    font-size: calc(1.75 * var(--fwcu));
+    line-height: calc(2.25 * var(--fwcu));
+  }
+  .fwc-carousel-quote-wrapper .fwc-carousel-body-title {
+    font-size: calc(1.5 * var(--fwcu));
+    line-height: calc(2.75 * var(--fwcu));
+  }
+  .fwc-carousel-quote-wrapper .fwc-carousel-info {
+    font-size: calc(1.5 * var(--fwcu));
+  }
+  .fwc-carousel-quote-wrapper .fwc-body-wrapper {
+    padding: 0 0 0 calc(2 * var(--fwcu));
+    flex-basis: calc(100% - (10 * var(--fwcu)));
+  }
+  .fwc-carousel-quote-wrapper .fwc-image {
+    flex-basis: calc(10 * var(--fwcu));
+    height: calc(10 * var(--fwcu));
+  }
+  .fwc-quote-bg {
+    left: calc(12.75 * var(--fwcu));
+    width: calc(12.5 * var(--fwcu));
+  }
+}
+@media screen and (min-width: 600px) {
+  .fwc-carousel-quote-wrapper {
+    padding: 0 calc(4 * var(--fwcu));
+  }
+}

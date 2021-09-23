@@ -1,0 +1,160 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif, serif);
+}
+h5,
+h5 {
+  font-family: var(--font-sans-serif, sans-serif);
+}
+
+h1 {
+  font-size: calc(4.75 * var(--fwcu));
+}
+h2 {
+  font-size: calc(4 * var(--fwcu));
+}
+h3 {
+  font-size: calc(3 * var(--fwcu));
+}
+h4 {
+  font-size: calc(2.5 * var(--fwcu));
+}
+h5 {
+  font-size: calc(2.25 * var(--fwcu));
+}
+h6 {
+  font-size: calc(2 * var(--fwcu));
+}
+h6.alt {
+  font-size: var(--default-font-size);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+h3,
+h4 {
+  font-weight: 500;
+}
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  line-height: calc(5.75 * var(--fwcu));
+}
+h2 {
+  line-height: calc(4.75 * var(--fwcu));
+}
+h3 {
+  line-height: calc(3.75 * var(--fwcu));
+}
+h4,
+h5,
+h6 {
+  line-height: calc(2.75 * var(--fwcu));
+}
+
+/* Mobile and Tablet only */
+@media screen and (max-width: 600px) and (hover: none) and (pointer: coarse) {
+  h1 {
+    font-size: calc(3.75 * var(--fwcu));
+    line-height: calc(4.75 * var(--fwcu));
+  }
+  h2 {
+    font-size: calc(3.5 * var(--fwcu));
+    line-height: calc(4.25 * var(--fwcu));
+  }
+  h3 {
+    font-size: calc(3 * var(--fwcu));
+  }
+  h4 {
+    font-size: calc(2.5 * var(--fwcu));
+  }
+}
+
+p,
+div,
+a,
+section,
+ul,
+ol,
+dl,
+figure,
+caption,
+nav,
+header,
+legend,
+label,
+footer,
+main,
+table,
+tr,
+td,
+dl,
+dd,
+dt,
+fieldset {
+  font-size: var(--default-font-size);
+  line-height: calc(2.75 * var(--fwcu));
+}
+
+@media screen and (max-width: 600px) and (hover: none) and (pointer: coarse) {
+  p,
+  div,
+  a,
+  section,
+  ul,
+  ol,
+  dl,
+  figure,
+  caption,
+  nav,
+  header,
+  legend,
+  label,
+  footer,
+  main,
+  table,
+  tr,
+  td,
+  dl,
+  dd,
+  dt,
+  fieldset {
+    font-size: var(--default-mobile-font-size);
+  }
+}
+
+.fwc-text-right {
+  text-align: right;
+}
+.fwc-text-left {
+  text-align: left;
+}
+.fwc-text-center {
+  text-align: center;
+}
+
+/* stop iOS zooming on focus */
+@media screen and (max-width: 900px) and (hover: none) and (pointer: coarse) {
+  select:active,
+  input:active,
+  textarea:active {
+    font-size: calc(2 * var(--fwcu));
+  }
+}

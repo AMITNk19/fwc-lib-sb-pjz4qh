@@ -1,0 +1,214 @@
+.fwc-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.fwc-row {
+  display: flex;
+  max-width: calc(144 * var(--fwcu));
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.fwc-row-wrap {
+  flex-wrap: wrap;
+}
+
+.fwc-row.j-center {
+  justify-content: center;
+}
+.fwc-row.j-end {
+  justify-content: flex-end;
+}
+.fwc-row.a-end {
+  align-items: flex-end;
+}
+.fwc-row.a-center {
+  align-items: center;
+}
+.fwc-row.a-start {
+  align-items: flex-start;
+}
+.fwc-row.a-stretch {
+  align-items: stretch;
+}
+
+.fwc-col-1 {
+  width: 8.33%;
+}
+.fwc-col-2 {
+  width: 16.6667%;
+}
+.fwc-col-3 {
+  width: 25%;
+}
+.fwc-col-4 {
+  width: 33.3333%;
+}
+.fwc-col-5 {
+  width: 41.6667%;
+}
+.fwc-col-6 {
+  width: 50%;
+}
+.fwc-col-7 {
+  width: 58.3333%;
+}
+.fwc-col-8 {
+  width: 66.6667%;
+}
+.fwc-col-9 {
+  width: 75%;
+}
+.fwc-col-10 {
+  width: 83.3333%;
+}
+.fwc-col-11 {
+  width: 91.6667%;
+}
+.fwc-col-12,
+.fwc-col-no-margin {
+  width: 100%;
+}
+
+.fwc-col-bm {
+  margin-bottom: calc(3 * var(--fwcu));
+}
+.fwc-row-bm {
+  margin-bottom: calc(3 * var(--fwcu));
+}
+
+.fwc-row *[class^='fwc-col-'] {
+  padding: 0 calc(1.5 * var(--fwcu));
+}
+.fwc-row .fwc-col-no-margin {
+  padding: 0;
+}
+.fwc-divider {
+  background-color: var(--color-gray-five);
+  height: calc(1.5 * var(--fwcu));
+  margin-top: calc(12 * var(--fwcu));
+  margin-bottom: calc(12 * var(--fwcu));
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .fwc-divider {
+    margin-top: calc(6 * var(--fwcu));
+    margin-bottom: calc(6 * var(--fwcu));
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .fwc-row {
+    flex-wrap: wrap;
+  }
+  .fwc-row.md-full *[class^='fwc-col-'] {
+    padding: 0;
+  }
+  .fwc-row *[class^='fwc-col-'].md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .fwc-row *[class^='fwc-col-'].md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .fwc-col-bm-md {
+    margin-bottom: calc(3 * var(--fwcu));
+  }
+  .fwc-row-bm-md {
+    margin-bottom: calc(3 * var(--fwcu));
+  }
+}
+@media screen and (max-width: 600px) {
+  .fwc-row.sm-full *[class^='fwc-col-'] {
+    margin: 0;
+  }
+  .fwc-row *[class^='fwc-col-'].sm-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .fwc-row *[class^='fwc-col-'].sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .fwc-row {
+    /*
+            5*fwcu = 40px.
+            40px + col-padding(12px)*2 = 64px.
+            64px / 2 = 32px gutter for mobile
+        */
+    max-width: calc(100% - (5 * var(--fwcu)));
+  }
+  .fwc-col-bm-sm {
+    margin-bottom: calc(3 * var(--fwcu));
+  }
+  .fwc-row-bm-sm {
+    margin-bottom: calc(3 * var(--fwcu));
+  }
+}
+
+/* Overflow Row w/ Snap Scroll
+    Snap not supported in IE, falls back to regular scroll
+*/
+@media screen and (max-width: 900px) {
+  .fwc-row.md-overflow {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .fwc-row.md-overflow *[class^='fwc-col-'] {
+    width: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fwc-row.sm-overflow {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .fwc-row.sm-overflow *[class^='fwc-col-'] {
+    width: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+/* Smartphones and tablets only */
+@media screen and (max-width: 600px) and (hover: none) and (pointer: coarse) {
+  .fwc-row.sm-overflow {
+    scrollbar-width: none;
+  }
+  .fwc-row.sm-overflow *[class^='fwc-col-'] {
+    width: 92%;
+  }
+  .fwc-row.sm-overflow::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 900px) and (hover: none) and (pointer: coarse) {
+  .fwc-row.md-overflow {
+    scrollbar-width: none;
+  }
+  .fwc-row.md-overflow *[class^='fwc-col-'] {
+    width: 92%;
+    padding: calc(0.75 * var(--fwcu));
+  }
+  .fwc-row.md-overflow::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

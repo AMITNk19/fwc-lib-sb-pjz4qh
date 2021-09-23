@@ -1,0 +1,39 @@
+<div style="position: fixed; width: 100%; z-index: 1">
+  <fwc-header-page title="Header"></fwc-header-page>
+</div>
+
+<!-- <div class="fwc-container" style="padding-top: 6rem">
+  <div class="fwc-row">
+    <div class="fwc-col-12">
+      <div class="fwc-card-generic">
+        <h1>Fork Me to Start!</h1>
+        <p>FWC-Lib version: <span id="Version"></span></p>
+        <button
+          class="fwc-btn fwc-btn-secondary"
+          @click="${handleEvent}"
+          id="fwc-modal-example-button-attr"
+        >
+          Open Modal by Attribute
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<button
+          class="fwc-btn fwc-btn-secondary"
+          @click="${handleEvent}"
+          id="fwc-modal-example-button-attr"
+        >
+          Open Modal by Attribute
+        </button>
+<fwc-modal
+  id="modalAttributeExample"
+  text-header="Are You Awake?"
+  text-body="Just checking.  There is a lot of content on this site, we want you to see all of it."
+>
+  <div slot="actions">
+    <button class="fwc-btn fwc-btn-secondary" id="btnClose">No</button>
+    <button class="fwc-btn fwc-btn-primary" id="btnApply">Yes</button>
+  </div>
+</fwc-modal>

@@ -1,0 +1,64 @@
+/*
+    Style only for Motif Toggle
+    Dependencies: vars.css
+*/
+
+/* TODO: Inactive States */
+
+.fwc-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fwc-toggle input[type='checkbox'] {
+  position: absolute;
+  left: -9999px;
+}
+
+.fwc-toggle label {
+  width: calc(5 * var(--fwcu));
+  height: calc(2.5 * var(--fwcu));
+  background-color: var(--color-gray-four);
+  color: var(--color-gray-one);
+  font-weight: 400;
+  border-radius: calc(2.25 * var(--fwcu));
+  cursor: pointer;
+  position: relative;
+}
+.fwc-toggle label:before {
+  width: calc(2.25 * var(--fwcu));
+  height: calc(2.25 * var(--fwcu));
+  background-color: white;
+  border-radius: 100%;
+  margin-left: calc(0.075 * var(--fwcu));
+  content: ' ';
+  position: absolute;
+  top: 1px;
+  transition: margin 200ms ease;
+}
+
+.fwc-toggle span {
+  position: absolute;
+  top: calc(-0.25 * var(--fwcu));
+  bottom: 0;
+  left: calc(100% + (1.5 * var(--fwcu)));
+  white-space: nowrap;
+}
+.fwc-toggle input[type='checkbox']:checked + label {
+  background-color: var(--color-primary);
+}
+.fwc-toggle input[type='checkbox']:checked + label::before {
+  margin-left: calc(2.5 * var(--fwcu));
+}
+.fwc-toggle input:focus + label {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.fwc-toggle input:disabled,
+.fwc-toggle input:disabled + label {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}

@@ -1,0 +1,8 @@
+/*
+    Option sheet for 16px body font size
+    To use, call this sheet before main.css
+*/
+
+:root {
+  --default-font-size: calc(2 * var(--fwcu));
+}

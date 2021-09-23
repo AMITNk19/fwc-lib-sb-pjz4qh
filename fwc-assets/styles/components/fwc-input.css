@@ -1,0 +1,99 @@
+/*
+    Style only for Motif Input
+    Dependencies: vars.css
+*/
+
+/* TODO: Inactive States */
+.fwc-input label {
+  display: block;
+  padding: 0;
+  border: none;
+  margin-bottom: var(--fwcu);
+  color: var(--color-gray-one);
+}
+.fwc-input input {
+  font-size: calc(2 * var(--fwcu));
+  border: 1px solid var(--color-gray-three);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-gray-two);
+  padding: calc(0.5 * var(--fwcu)) calc(2 * var(--fwcu));
+  height: calc(5 * var(--fwcu));
+  width: 100%;
+}
+/* Error State */
+.fwc-input input[aria-invalid="true"] {
+  border-color: var(--color-alert-error);
+}
+.fwc-input span[role="alert"] {
+  color: var(--color-alert-error);
+  display:flex;
+  align-items: center;
+  padding-top: var(--fwcu);
+}
+.fwc-input span[role="alert"]::before {
+  color: var(--color-alert-error);
+  font-size: calc(1.75 * var(--fwcu));
+}
+
+/* Disabled State */
+.fwc-input.fwc-disabled,
+.fwc-input.fwc-disabled input:disabled {
+  opacity: 0.5;
+}
+
+/** Input with icon */
+.fwc-input.fwc-input-icon .fwc-icon {
+  position: absolute;
+  padding: calc(1.25 * var(--fwcu));
+  font-size: calc(2.5 * var(--fwcu));
+  padding-top: calc(1.25 * var(--fwcu));
+}
+.fwc-input.fwc-input-icon input {
+  padding-left: calc(5 * var(--fwcu));
+}
+
+/** Search input with animation */
+.fwc-input-search {
+  display: flex;
+  align-items: center;
+}
+.fwc-input-search input:not(:focus) {
+  transition: all 200ms ease-out;
+  width: calc(10 * var(--fwcu));
+}
+.fwc-input-search input:focus {
+  transition: all 200ms ease-in;
+  width: calc(22.5 * var(--fwcu));
+}
+.fwc-input-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  caret-color: var(--color-white);
+  color: var(--color-white);
+  padding-left: calc(1 * var(--fwcu));
+}
+.fwc-input-search input::placeholder {
+  color: var(--color-white);
+}
+.fwc-input-search input::-ms-input-placeholder {
+  color: var(--color-white);
+}
+.fwc-input-search.fwc-icon-search {
+  position: absolute;
+  left: 0;
+  top: calc(0.5 * var(--fwcu));
+}
+.fwc-input-search.active {
+  background-color: var(--color-primary-hover);
+  transition: 200ms all ease-out;
+}
+.fwc-input-search {
+  padding: calc(0.5 * var(--fwcu)) calc(2 * var(--fwcu));
+  background-color: transparent;
+  border-radius: calc(4 * var(--fwcu));
+  color: var(--color-white);
+  transition: 200ms all ease-in;
+  font-weight: 600;
+}

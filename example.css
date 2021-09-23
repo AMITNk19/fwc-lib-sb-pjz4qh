@@ -1,0 +1,8 @@
+html,
+body {
+  font-size: var(--default-font-size);
+}
+.fwc-card-generic {
+  padding: 3rem;
+  margin-top: 3rem;
+}

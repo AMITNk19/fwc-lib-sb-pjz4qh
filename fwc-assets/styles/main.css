@@ -1,0 +1,167 @@
+/* Reset
+----------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans-serif);
+  font-size: var(--fwcu);
+}
+
+/*
+   ### DO NOT USE px for spatial values, only use rems in 1/4 increments;
+   ### 1rem is 8px and is set on body above.
+
+   1rem = 8px;
+   1.5rem = 12px;
+   1.75rem = 14px;
+   2rem = 16px;
+   2.25rem = 18px;
+   2.75rem = 22px;
+   3rem = 24px;
+   3.25rem = 26px;
+   4rem = 32px;
+   4.75rem = 38px;
+*/
+
+/* Only display content to screen readers
+  // See: http://a11yproject.com/posts/how-to-hide-content/ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Use in conjunction with .sr-only to only display content when it's focused.
+  // Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+  // Credit: HTML5 Boilerplate */
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  font-size: var(--default-font-size);
+  color: var(--color-primary);
+}
+
+/* iOS "clickable elements" fix for role="button"
+  //
+  // Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+  // for traditionally non-focusable elements with role="button"
+  // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile */
+
+[role='button'] {
+  cursor: pointer;
+}
+
+/* Helper classes */
+
+.fwc-hide {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.fwc-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fwc-flex.a-start {
+  align-items: flex-start;
+}
+.fwc-flex.a-end {
+  align-items: flex-end;
+}
+.fwc-flex.a-base {
+  align-items: baseline;
+}
+.fwc-flex.j-between {
+  justify-content: space-between;
+}
+.fwc-flex.j-center {
+  justify-content: center;
+}
+.fwc-flex.wrap {
+  flex-wrap: wrap;
+}

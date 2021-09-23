@@ -1,0 +1,58 @@
+/*
+    Style only for Motif Checkbox
+    Dependencies: icons.css, vars.css
+*/
+
+/* TODO: Make self contained sheet with icon */
+/* TODO: Inactive States */
+
+.fwc-checkbox input {
+  position: absolute;
+  left: -99999px;
+}
+.fwc-checkbox input[disabled] + label {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.fwc-checkbox input[disabled] + label::before {
+  cursor: default;
+  pointer-events: none;
+}
+.fwc-checkbox label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--color-gray-one);
+}
+
+.fwc-checkbox label::before {
+  content: '\e906';
+  color: rgba(var(--color-rgb-white), 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--fwcu);
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-gray-three);
+  border-radius: calc(0.5 * var(--fwcu));
+  cursor: pointer;
+  font-family: 'fwc-motif-icons' !important;
+  font-size: calc(1.25 * var(--fwcu));
+  line-height: 1;
+  width: calc(2 * var(--fwcu));
+  height: calc(2 * var(--fwcu));
+}
+
+.fwc-checkbox input:checked + label:before {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.fwc-checkbox input:focus + label:before {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}

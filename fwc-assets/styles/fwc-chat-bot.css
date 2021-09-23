@@ -1,0 +1,177 @@
+/* Chat Bubble CSS Start */
+.fwc-chat-bubble {
+  margin-bottom: calc(1 * var(--fwcu));
+  padding: calc(1.5 * var(--fwcu)) calc(3 * var(--fwcu));
+}
+.fwc-chat-bubble.fwc-chat-bubble-user {
+  width: 85%;
+  position: relative;
+  left: 15%;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: calc(3 * var(--fwcu)) calc(3 * var(--fwcu)) calc(0.5 * var(--fwcu)) calc(3 * var(--fwcu));
+}
+.fwc-chat-bubble.fwc-chat-bubble-bot {
+  width: 85%;
+  background-color: var(--color-gray-five);
+  border-radius: calc(3 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu)) calc(0.5 * var(--fwcu));
+}
+.fwc-chat-bubble p {
+  margin: 0px;
+}
+.fwc-chat-bubble-bot.middle {
+  border-top-left-radius: calc(0.5 * var(--fwcu));
+}
+.fwc-chat-bubble-bot.last {
+  border-radius: calc(0.5 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu));
+}
+.fwc-chat-bubble-user.middle {
+  border-top-right-radius: calc(0.5 * var(--fwcu));
+  border-bottom-right-radius: calc(0.5 * var(--fwcu));
+}
+.fwc-chat-bubble-user.last {
+  border-radius: calc(3 * var(--fwcu)) calc(0.5 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu));
+}
+
+.fwc-chat-bubble.fwc-chat-bubble-user.typing {
+  width: calc(10.5 * var(--fwcu));
+  left: calc(100% - calc(10.5 * var(--fwcu)));
+}
+.fwc-chat-bubble.fwc-chat-bubble-bot.typing {
+  width: calc(10.5 * var(--fwcu));
+}
+/* Chat Bubble CSS End */
+/* Chat Dot CSS Start */
+.typing {
+  display: flex;
+  justify-content: center;
+  width: calc(11 * var(--fwcu));
+  padding: calc(2.5 * var(--fwcu)) calc(3 * var(--fwcu)) calc(2 * var(--fwcu));
+}
+.fwc-chat-bubble-user.typing div,
+.fwc-chat-bubble-user.typing::before,
+.fwc-chat-bubble-user.typing::after {
+  background-color: rgba(var(--color-rgb-white), 0.7);
+}
+.fwc-chat-bubble-bot.typing div,
+.fwc-chat-bubble-bot.typing::before,
+.fwc-chat-bubble-bot.typing::after {
+  background-color: rgba(var(--color-rgb-primary), 0.7);
+}
+.typing div,
+.typing::before,
+.typing::after {
+  content: '';
+  display: block;
+  width: calc(1 * var(--fwcu));
+  height: calc(1 * var(--fwcu));
+  border-radius: 50%;
+  margin-right: calc(0.5 * var(--fwcu));
+}
+.typing::before {
+  animation: loading 0.9s infinite;
+}
+.typing div {
+  animation: loading 0.9s 0.15s infinite;
+}
+.typing::after {
+  animation: loading 0.9s 0.3s infinite;
+}
+@keyframes loading {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(0, -4px, 0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Chat Dot CSS End */
+/* Chat Pills CSS Start */
+.fwc-chat-pill {
+  border: 1px solid var(--color-gray-three);
+  background: var(--color-white);
+  font-weight: bold;
+  border-radius: calc(2.5 * var(--fwcu));
+  display: inline-block;
+  padding: calc(1 * var(--fwcu)) calc(2.5 * var(--fwcu));
+  margin-right: calc(1 * var(--fwcu));
+  margin-bottom: calc(2 * var(--fwcu));
+  box-shadow: 0 2px 4px 0 rgba(var(--color-rgb-black), 0.16);
+}
+.fwc-chat-pill:hover {
+  cursor: pointer;
+  border-color: var(--color-primary);
+}
+/* Chat Pills CSS End */
+/* Chat Action List Start */
+.fwc-action-list.fwc-chat-bubble.fwc-chat-bubble-bot {
+  margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+.fwc-action-list-label {
+  border-bottom: 1px solid var(--color-gray-four);
+  padding: calc(1.5 * var(--fwcu)) calc(3 * var(--fwcu));
+  margin: 0;
+}
+.fwc-action-list.fwc-chat-bubble-bot .fwc-action-list_button:last-child {
+  border-radius: 0 0 calc(3 * var(--fwcu)) calc(0.75 * var(--fwcu));
+}
+.fwc-action-list input {
+  position: absolute;
+  left: -9999px;
+}
+.fwc-action-list label {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: calc(1.75 * var(--fwcu)) 0;
+  text-align: center;
+}
+.fwc-action-list label:hover {
+  cursor: pointer;
+}
+.fwc-action-list input:checked + label {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+/* CSS Action List End */
+/* CSS Chat Accordion Start */
+.fwc-chat-table .fwc-table-container {
+  display: flex;
+  flex-direction: column;
+}
+.fwc-chat-table .fwc-table-container .fwc-table-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: calc(1 * var(--fwcu)) 0;
+  border-bottom: 1px solid var(--color-gray-five);
+}
+.fwc-chat-table .fwc-table-container .fwc-table-item p {
+  font-weight: 300;
+  margin: 0px;
+}
+.fwc-chat-table .fwc-table-container .table-item:last-of-type() {
+  border-bottom: none;
+}
+.fwc-chat-accordion {
+  background-color: var(--color-gray-five);
+  border-radius: calc(0.75 * var(--fwcu)) calc(1 * var(--fwcu)) calc(1 * var(--fwcu)) calc(1 * var(--fwcu));
+  margin-bottom: calc(1 * var(--fwcu));
+}
+.fwc-chat-background {
+  background-color: var(--color-gray-five);
+  border-radius: calc(0.5 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu)) calc(3 * var(--fwcu));
+}
+/* CSS Chat Accordion End */

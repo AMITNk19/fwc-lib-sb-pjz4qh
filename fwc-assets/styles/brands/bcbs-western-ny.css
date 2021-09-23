@@ -1,0 +1,70 @@
+/*
+  FWC CSS CUSTOM PROPS
+  FOR IE11 Support, add to style in head
+  <style class="global-style-vars">
+   ...
+  </style>
+*/
+:root {
+  --color-rgb-brand: 0, 121, 194;
+  --color-rgb-primary: 0, 125, 167;
+  --color-rgb-primary-hover: 0, 85, 127;
+  --color-rgb-util-one: 61, 128, 139;
+  --color-rgb-util-two: 217, 232, 235;
+  --color-rgb-util-three: 0, 75, 107;
+  --color-rgb-util-four: 105, 162, 68;
+  --color-rgb-util-five: 63, 97, 40;
+  --color-rgb-dviz-one: 61, 128, 139;
+  --color-rgb-dviz-two: 149, 110, 43;
+  --color-rgb-dviz-three: 3, 105, 139;
+  --color-rgb-dviz-four: 203, 38, 44;
+  --color-rgb-dviz-five: 250, 255, 189;
+  --color-rgb-dviz-six: 203, 42, 115;
+  --color-rgb-dviz-seven: 255, 77, 97;
+  --color-rgb-dviz-eight: 242, 188, 53;
+  --color-rgb-gray-one: 51, 51, 51;
+  --color-rgb-gray-two: 102, 102, 102;
+  --color-rgb-gray-three: 148, 148, 148;
+  --color-rgb-gray-four: 204, 204, 204;
+  --color-rgb-gray-five: 247, 247, 247;
+  --color-rgb-gray-six: 238, 238, 238;
+  --color-rgb-black: 0, 0, 0;
+  --color-rgb-white: 255, 255, 255;
+  --color-rgb-btn-second-border: 240, 245, 255;
+  --color-rgb-alert-success: 59, 178, 115;
+  --color-rgb-alert-info: 36, 83, 166;
+  --color-rgb-alert-error: 210, 10, 60;
+  --color-rgb-alert-warning: 242, 188, 53;
+
+  --color-brand: rgb(var(--color-rgb-brand));
+  --color-primary: rgb(var(--color-rgb-primary));
+  --color-primary-hover: rgb(var(--color-rgb-primary-hover));
+  --color-util-one: rgb(var(--color-rgb-util-one));
+  --color-util-two: rgb(var(--color-rgb-util-two));
+  --color-util-three: rgb(var(--color-rgb-util-three));
+  --color-util-four: rgb(var(--color-rgb-util-four));
+  --color-util-five: rgb(var(--color-rgb-util-five));
+  --color-dviz-one: rgb(var(--color-rgb-dviz-one));
+  --color-dviz-two: rgb(var(--color-rgb-dviz-two));
+  --color-dviz-three: rgb(var(--color-rgb-dviz-three));
+  --color-dviz-four: rgb(var(--color-rgb-dviz-four));
+  --color-dviz-five: rgb(var(--color-rgb-dviz-five));
+  --color-dviz-six: rgb(var(--color-rgb-dviz-six));
+  --color-dviz-seven: rgb(var(--color-rgb-dviz-seven));
+  --color-dviz-eight: rgb(var(--color-rgb-dviz-eight));
+  --color-gray-one: rgb(var(--color-rgb-gray-one));
+  --color-gray-two: rgb(var(--color-rgb-gray-two));
+  --color-gray-three: rgb(var(--color-rgb-gray-three));
+  --color-gray-four: rgb(var(--color-rgb-gray-four));
+  --color-gray-five: rgb(var(--color-rgb-gray-five));
+  --color-gray-six: rgb(var(--color-rgb-gray-six));
+  --color-black: rgb(var(--color-rgb-black));
+  --color-white: rgb(var(--color-rgb-white));
+  --color-btn-second-border: rgb(var(--color-rgb-btn-second-border));
+  --default-font-size: calc(2*var(--fwcu));
+  --default-mobile-font-size: calc(1.75*var(--fwcu));
+  --color-alert-success: rgb(var(--color-rgb-alert-success));
+  --color-alert-info: rgb(var(--color-rgb-alert-info));
+  --color-alert-error: rgb(var(--color-rgb-alert-error));
+  --color-alert-warning: rgb(var(--color-rgb-alert-warning));
+  }

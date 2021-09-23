@@ -1,0 +1,34 @@
+.fwc-labeled-data,
+.fwc-labeled-data dl dt {
+  text-align: center;
+}
+.fwc-labeled-data dl {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  max-width: calc(13 * var(--fwcu)); /*104px*/
+  margin: 0 auto;
+}
+.fwc-labeled-data dl dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: calc(2 * var(--fwcu));
+}
+.fwc-labeled-data dl dd strong {
+  /* size of H1 - do we want this? */
+  font-size: calc(4.75 * var(--fwcu));
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+.fwc-labeled-data dl dd div {
+  color: var(--color-gray-two);
+  padding: var(--fwcu) 0;
+}
+.fwc-labeled-data dl dt span {
+  color: var(--color-gray-two);
+}
+
+.fwc-labeled-data button {
+  margin-top: calc(2 * var(--fwcu));
+}
